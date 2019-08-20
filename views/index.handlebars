@@ -6,25 +6,26 @@
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
-                <li>
-                    {{burger_name}}
-
-                    <button class="change-devoured" data-id="{{id}}" data-newsleep="{{sleep}}">
-                        {{#if devoured}}NO EAT TIME!{{else}}EAT TIME!{{/if}}
-                    </button>
-
-                </li>
+                {{> burger/burger-block devoured=false}}
                 {{/unless}}
                 {{/each}}
             </ul>
 
         </div>
         <div class="col-md-2"></div>
-        <div class="col-md-5"></div>
+        <div class="col-md-5">
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burger/burger-block devoured=true}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
 </div>
 
 <textarea id="usersBurger"></textarea>
 <br>
 <button id="submit">Submit</button>
-<p>Enter the burger you to eat and click "Submit"</p>
+<p>If your burger of choice is not listed, type a new one above and click "Submit"</p>
