@@ -14,7 +14,7 @@ $(document).on("click", "#submit", function(){
 })
 
 // On click button for the time to eat buttons
-$(document).on("click", ".change-devoured", function(){
+$(document).on("click", ".notdevouredCard", function(){
     
     // sets user data id into a new variable
     let burgerID = $(this).attr("data-id");
