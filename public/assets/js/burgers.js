@@ -12,3 +12,23 @@ $(document).on("click", "#submit", function(){
     // reloads the page so that the user can see the new burger displayed
     location.reload();
 })
+
+// On click button for the time to eat buttons
+$(document).on("click", ".change-devoured", function(){
+    
+    // sets user data id into a new variable
+    let burgerID = $(this).attr("data-id");
+    let burgerDevoured = {
+        devoured: true
+    }
+
+    $.ajax({
+        url: `/api/burgers/${burgerID}`,
+        data: burgerDevoured,
+        method: `PUT`
+    }).then(function(){
+        console.log(`this worked`);
+    })
+
+    location.reload();
+})
