@@ -1,11 +1,14 @@
-<li>
-    {{burger_name}}
 
-    {{#if devoured}}
-    {{else}}
-    <button class="change-devoured" data-id="{{id}}">
-       Time to Eat!
-    </button>
-    {{/if}}
-
-</li>
+{{#if devoured}}
+<div class="card devouredCard" style="width: 15rem;">
+    <div class="card-body devoured">
+        <h5 class="card-title">{{burger_name}}</h5>
+    </div>
+</div>
+{{else}}
+<div class="card notdevouredCard" style="width: 15rem;">
+    <div class="card-body notDevoured">
+        <h5 class="card-title notdevouredText">{{burger_name}}</h5>
+    </div>
+</div>
+{{/if}}

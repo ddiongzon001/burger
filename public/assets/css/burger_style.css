@@ -28,3 +28,23 @@ h1{
     transform: scaleX(-1);
     float: left;
 }
+
+.notDevoured{
+    background: url(../images/burger.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.notDevoured:hover{
+    background: url(../images/burger-eat.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.notdevouredCard:hover{
+    border: 1px solid red;
+}
+
+.notdevouredText{
+    margin-top: 125px;
+}
