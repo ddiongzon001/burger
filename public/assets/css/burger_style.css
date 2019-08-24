@@ -1,3 +1,30 @@
 body{
-    background: hotpink;
+    background: url(../images/background.png);
+    
+}
+
+.header{
+    border: 5px dashed pink;
+    padding-bottom: 2%;
+}
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 12%;
+    width: 100%;
+    color: red;
+    text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
+    font-family: 'Concert One', cursive;
+}
+
+.burger-img-left{
+    width: 100px;
+    float: right;
+}
+
+.burger-img-right{
+    width: 100px;
+    transform: scaleX(-1);
+    float: left;
 }
