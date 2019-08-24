@@ -13,28 +13,32 @@
 
     <div class="row input">
         <div class="col-md-12">
-            <textarea id="usersBurger"></textarea>
+            <p>Click on the burger you'd like to eat! If your burger of choice is not listed, type a new one above and click "Submit"</p>
+            <div class="input-group mb-3">
+                <input id="usersBurger" type="text" class="form-control" placeholder="Burger Name" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" id= "submit" type="button">Submit</button>
+                </div>
+            </div>
             <br>
-            <button id="submit">Submit</button>
-            <p>If your burger of choice is not listed, type a new one above and click "Submit"</p>
 
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-6 burgers">
-                {{#each burgers}}
-                {{#unless devoured}}
-                {{> burger/burger-block devoured=false}}
-                {{/unless}}
-                {{/each}}
+            {{#each burgers}}
+            {{#unless devoured}}
+            {{> burger/burger-block devoured=false}}
+            {{/unless}}
+            {{/each}}
         </div>
         <div class="col-md-6">
-                {{#each burgers}}
-                {{#if devoured}}
-                {{> burger/burger-block devoured=true}}
-                {{/if}}
-                {{/each}}
+            {{#each burgers}}
+            {{#if devoured}}
+            {{> burger/burger-block devoured=true}}
+            {{/if}}
+            {{/each}}
         </div>
     </div>
 </div>
