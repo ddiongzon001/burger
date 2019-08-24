@@ -3,6 +3,12 @@ body{
     
 }
 
+h4{
+    font-weight: bold;
+    color: purple;
+    font-size: 20px;
+}
+
 .container{
     background-color: rgba(219, 161, 219, 0.521);
     border: 5px dashed rgba(255, 255, 0, 0.411);
@@ -52,7 +58,7 @@ h1{
 }
 
 .notdevouredCard:hover{
-    border: 1px solid red;
+    border: 1px double red;
 }
 
 .notdevouredText{
